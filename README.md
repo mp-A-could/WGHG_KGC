@@ -40,31 +40,19 @@ A knowledge graph completion model combining Wavelet-enhanced Graph Attention Ne
 ### Training
 
 ```bash
-python main.py -dataset WN18RR -batch_size 200 -epoch 100
+python main.py -dataset WN18RR -batch_size 512 -epoch 100
 ```
 
-### Testing
-
-```bash
-python main.py -dataset WN18RR -model_path checkpoint/WN18RR/WN18RR-best.pth
-```
-
-### Continue Training
-
-```bash
-python main.py -dataset WN18RR -continue_path checkpoint/WN18RR/WN18RR-best.pth
-```
 
 ## Key Parameters
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
 | `-dataset` | WN18RR | Dataset name |
-| `-batch_size` | 200 | Training batch size |
+| `-batch_size` | 512 | Training batch size |
 | `-epoch` | 100 | Number of training epochs |
 | `-embed_dim` | 128 | Entity embedding dimension |
 | `-gat_heads` | 4 | Number of GAT attention heads |
 | `-cheb_K` | 4 | Chebyshev polynomial order |
 | `-neg_K` | 300 | Number of negative samples |
-| `-text_score_weight` | 7 | Text score weight for inference |
 | `-lr` | 0.001 | Learning rate |
